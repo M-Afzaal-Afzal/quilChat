@@ -23,8 +23,8 @@ const Header = () => {
     }
 
     return (
-        <Box h={'42px'} zIndex={9999999999} position={'fixed'} w={'100%'}>
-            <Container zIndex={999999999} position={'fixed'} top={0} left={0} maxWidth={'container.xl'}>
+        <Box h={'42px'} zIndex={999999999} position={'fixed'} top={0} left={0}  w={'100%'}>
+            <Container zIndex={999999999} left={'50%'} transform={'translateX(-50%)'} position={'fixed'} maxWidth={'container.xl'}>
                 <Flex h={42} alignItems={'center'}>
                     {
                         isLarger600 && (
