@@ -10,7 +10,7 @@ const MessagingSection = () => {
     return (
         <Box
         bg={'rgb(0, 0, 0)'}
-        p={'50px 10px'}
+        p={['0','50px 10px']}
         overflow={'hidden'}
         position={'relative'}
         pb={['50px','50px']}
@@ -31,6 +31,7 @@ const MessagingSection = () => {
             <Container
                 maxWidth={'container.xl'}
                 m={'0px auto'}
+                p={[0,'2rem']}
             >
 
                 <MessagingInfo/>
