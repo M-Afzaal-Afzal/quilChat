@@ -6,9 +6,9 @@ const HeroSection = () => {
     return (
         <Box display={'flex'}
              flexDirection={'column'}
-             // minH={['600px', 'auto']}
-             maxH={['1000px', '1100px']}
-             height={['82vh', '100vh']}
+             // minH={['600px', '800px']}
+             // maxH={['1000px', '1100px']}
+             // height={['82vh', '100vh']}
              margin={'0 auto'}
         >
 
