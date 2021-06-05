@@ -17,9 +17,9 @@ const colors = {};
 
 const breakpoints = createBreakpoints({
     sm: '37.5em',
-    md: '52em',
-    lg: '64em',
-    xl: '80em',
+    md: '56.25em',
+    lg: '75em',
+    xl: '87.5em',
 })
 
 const theme = extendTheme({
