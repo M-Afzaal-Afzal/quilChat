@@ -14,9 +14,9 @@ const ConversationSection = () => {
         >
             <Container
                 maxW={'container.xl'}
-                disableGutters
                 padding={0}
                 margin={'0px auto'}
+                bg={'rgb(245, 245, 247)'}
             >
 
                 <ConversationSectionInfo/>
