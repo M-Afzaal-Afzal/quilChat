@@ -12,7 +12,7 @@ const ConversationCardsSection = () => {
             px={'23px'}
             m={'0 auto'}
             maxW={'container.xl'}
-            bg={'#eee'}
+
         >
             {/* First Card*/}
 

@@ -2,7 +2,6 @@ import {Box} from "@chakra-ui/react";
 import HeroSection from "../components/Home/HeroSection";
 import MessagingSection from "../components/Home/MessagingSection/MessagingSection";
 import ConversationSection from "../components/Home/ConversationSection/ConversationSection";
-import ConversationCardsSection from "../components/Home/ConversationSection/ConversationCardsSection";
 
 const Home = () => {
 
@@ -11,7 +10,6 @@ const Home = () => {
             <HeroSection/>
             <MessagingSection/>
             <ConversationSection/>
-            <ConversationCardsSection/>
         </Box>
     )
 }
