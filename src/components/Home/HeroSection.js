@@ -63,6 +63,7 @@ const HeroSection = () => {
                         flexGrow={1}
                         pt={'2rem'}
                         margin={'0px auto'}
+                        mt={['1.5rem','0']}
                         padding={'20px 0 40px'}
                         position={"relative"}
                         zIndex={2}
@@ -247,7 +248,8 @@ const HeroSection = () => {
                         bottom={0}
                         display={'flex'}
                         alignItems={'center'}
-                        pb={'30px'}
+                        p={0}
+                        pb={['30px']}
                         transition={'opacity 1.2s ease 1.5s, transform 1.2s ease 1.5s'}
                         opacity={1}
                     >
