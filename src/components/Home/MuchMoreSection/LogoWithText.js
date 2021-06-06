@@ -1,5 +1,18 @@
 import React from 'react';
 import {Box, forwardRef} from "@chakra-ui/react";
+import {keyframes} from "@emotion/react";
+import Reveal from "react-awesome-reveal";
+
+const customAnimation = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    animation-delay: 1s;
+    opacity: 1;
+    transform: translateY(0);
+  }`;
 
 const LogoWithText = forwardRef (({width,height,brandLogo,brandText,...props},ref) => {
     return (
@@ -17,6 +30,7 @@ const LogoWithText = forwardRef (({width,height,brandLogo,brandText,...props},re
             {...props}
             ref={ref}
         >
+            <Reveal keyframes={customAnimation} direction={'down'} cascade triggerOnce>
 
             <img
                 // style={{
@@ -35,7 +49,7 @@ const LogoWithText = forwardRef (({width,height,brandLogo,brandText,...props},re
             >
                 {brandText}
             </Box>
-
+            </Reveal>
         </Box>
     );
 }) ;

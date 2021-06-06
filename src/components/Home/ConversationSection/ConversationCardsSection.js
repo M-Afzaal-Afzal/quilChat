@@ -1,5 +1,18 @@
 import React from 'react';
 import {Box, Container} from "@chakra-ui/react";
+import {keyframes} from "@emotion/react";
+import Reveal from "react-awesome-reveal";
+
+const customAnimation = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    animation-delay: 1s;
+    opacity: 1;
+    transform: translateY(0);
+  }`;
 
 const ConversationCardsSection = () => {
     return (
@@ -29,43 +42,45 @@ const ConversationCardsSection = () => {
                 <Box p={['30px 30px 0px', '40px 50px 0px']}
                      maxW={'790px'}
                 >
+                    <Reveal keyframes={customAnimation} direction={'down'} cascade triggerOnce>
 
-                    <Box>
-                        <img
-                            style={{width: "42px", height: "42px"}}
-                            src={"https://quill.chat/images/homepage/section_2/threads.svg"}
-                            width="42"
-                            height="42"
-                        />
-                    </Box>
-
-                    <Box
-                        lineHeight={'1.28em'}
-                        letterSpacing={'.18px'}
-                        color={'rgb(39, 164, 214)'}
-                        fontWeight={600}
-                        fontSize={'18px'}
-                        m={['5px 0px 1em']}
-                    >
-                        Retroactive Threads
-                    </Box>
-
-                    <Box
-                        color={'rgba(0,0,0,.6)'}
-                        lineHeight={'1.23536em'}
-                        fontWeight={500}
-                        fontSize={'22px'}
-                        mb={'1em'}
-                    >
-
-                        <Box display={'inline-block'} fontWeight={600} color={'rgb(0, 0, 0)'}>
-                            Create a thread from any set of messages.
+                        <Box>
+                            <img
+                                style={{width: "42px", height: "42px"}}
+                                src={"https://quill.chat/images/homepage/section_2/threads.svg"}
+                                width="42"
+                                height="42"
+                            />
                         </Box>
-                        It happens all the time, someone said something that should be in its own thread. No sweat —
-                        grab any set of messages and roll them up.
-                    </Box>
 
+                        <Box
+                            lineHeight={'1.28em'}
+                            letterSpacing={'.18px'}
+                            color={'rgb(39, 164, 214)'}
+                            fontWeight={600}
+                            fontSize={'18px'}
+                            m={['5px 0px 1em']}
+                        >
+                            Retroactive Threads
+                        </Box>
+
+                        <Box
+                            color={'rgba(0,0,0,.6)'}
+                            lineHeight={'1.23536em'}
+                            fontWeight={500}
+                            fontSize={'22px'}
+                            mb={'1em'}
+                        >
+
+                            <Box display={'inline-block'} fontWeight={600} color={'rgb(0, 0, 0)'}>
+                                Create a thread from any set of messages.
+                            </Box>
+                            It happens all the time, someone said something that should be in its own thread. No sweat —
+                            grab any set of messages and roll them up.
+                        </Box>
+                    </Reveal>
                 </Box>
+
 
                 <Box
                     pos={'relative'}
@@ -115,47 +130,48 @@ const ConversationCardsSection = () => {
                 <Box p={['40px 50px 0px', '40px 50px 0px']}
                      maxW={'790px'}
                 >
+                    <Reveal keyframes={customAnimation} direction={'down'} cascade triggerOnce>
 
-                    <Box>
+                        <Box>
 
-                        <img
-                            style={{
-                                width: '42px',
-                                height: '42px'
-                            }}
-                            src={"https://quill.chat/images/homepage/section_2/replies.svg"}
-                            width="42"
-                            height="42"/>
-                    </Box>
-
-                    <Box m={['5px 0px 1rem', '5px 0px 1rem']}
-                         fontSize={'18px'}
-                         fontWeight={600}
-                         color={'rgb(39, 164, 214)'}
-                         letterSpacing={'0.18px'}
-                         lineHeight={'1.28em'}
-                    >
-                        Replies
-                    </Box>
-
-                    <Box
-                        color={'rgba(0,0,0,.6)'}
-                        lineHeight={'1.23536em'}
-                        fontWeight={500}
-                        fontSize={'22px'}
-                        mb={'1em'}
-                    >
-
-                        <Box display={'inline-block'}
-                             color={'rgb(0, 0, 0)'}
-                             fontWeight={600}
-
-                        >
-                            Reply directly to a message.
+                            <img
+                                style={{
+                                    width: '42px',
+                                    height: '42px'
+                                }}
+                                src={"https://quill.chat/images/homepage/section_2/replies.svg"}
+                                width="42"
+                                height="42"/>
                         </Box>
-                        For those quick back-and-forths.
-                    </Box>
 
+                        <Box m={['5px 0px 1rem', '5px 0px 1rem']}
+                             fontSize={'18px'}
+                             fontWeight={600}
+                             color={'rgb(39, 164, 214)'}
+                             letterSpacing={'0.18px'}
+                             lineHeight={'1.28em'}
+                        >
+                            Replies
+                        </Box>
+
+                        <Box
+                            color={'rgba(0,0,0,.6)'}
+                            lineHeight={'1.23536em'}
+                            fontWeight={500}
+                            fontSize={'22px'}
+                            mb={'1em'}
+                        >
+
+                            <Box display={'inline-block'}
+                                 color={'rgb(0, 0, 0)'}
+                                 fontWeight={600}
+
+                            >
+                                Reply directly to a message.
+                            </Box>
+                            For those quick back-and-forths.
+                        </Box>
+                    </Reveal>
                 </Box>
 
                 {/* video section*/}
@@ -197,47 +213,48 @@ const ConversationCardsSection = () => {
                     p={['30px 30px 0px', '40px 50px 0px']}
                     maxW={'790px'}
                 >
+                    <Reveal keyframes={customAnimation} direction={'down'} cascade triggerOnce>
 
-                    <Box>
-                        <img src={"https://quill.chat/images/homepage/section_2/split.svg"}
-                             width="42"
-                             height="42"
-                        />
-                    </Box>
-
-                    <Box
-                        m={['5px 0px 1em', '5px 0px 1em']}
-                        color={'rgb(39, 164, 214)'}
-                        lineHeight={'1.28em'}
-                        letterSpacing={'0.18px'}
-                        fontWeight={600}
-                        fontSize={'18px'}
-                    >
-                        Split + Move
-                    </Box>
-
-                    <Box
-                        maxW={['520px', 'auto']}
-                        color={'rgba(0, 0, 0, 0.6)'}
-                        lineHeight={'1.23536em'}
-                        fontWeight={500}
-                        fontSize={'22px'}
-                        mb={'1em'}
-                    >
-
-                        <Box display={'inline-block'}
-                             color={'rgb(0, 0, 0)'}
-                             fontWeight={600}
-                        >
-
-                            Split threads and move messages.
-
+                        <Box>
+                            <img src={"https://quill.chat/images/homepage/section_2/split.svg"}
+                                 width="42"
+                                 height="42"
+                            />
                         </Box>
 
-                        If there’s a better home for a topic, move it. Keep things organized and easy to find.
+                        <Box
+                            m={['5px 0px 1em', '5px 0px 1em']}
+                            color={'rgb(39, 164, 214)'}
+                            lineHeight={'1.28em'}
+                            letterSpacing={'0.18px'}
+                            fontWeight={600}
+                            fontSize={'18px'}
+                        >
+                            Split + Move
+                        </Box>
 
-                    </Box>
+                        <Box
+                            maxW={['520px', 'auto']}
+                            color={'rgba(0, 0, 0, 0.6)'}
+                            lineHeight={'1.23536em'}
+                            fontWeight={500}
+                            fontSize={'22px'}
+                            mb={'1em'}
+                        >
 
+                            <Box display={'inline-block'}
+                                 color={'rgb(0, 0, 0)'}
+                                 fontWeight={600}
+                            >
+
+                                Split threads and move messages.
+
+                            </Box>
+
+                            If there’s a better home for a topic, move it. Keep things organized and easy to find.
+
+                        </Box>
+                    </Reveal>
 
                 </Box>
 
@@ -256,7 +273,7 @@ const ConversationCardsSection = () => {
 
             </Box>
 
-        {/*    Fourth Card  */}
+            {/*    Fourth Card  */}
 
             <Box
                 gridColumn={'1 / 4'}
@@ -273,47 +290,48 @@ const ConversationCardsSection = () => {
                     p={['30px 30px 0px', '40px 50px 0px']}
                     maxW={'790px'}
                 >
+                    <Reveal keyframes={customAnimation} direction={'down'} cascade triggerOnce>
 
-                    <Box>
-                        <img src={"https://quill.chat/images/homepage/section_2/pin.svg"}
-                             width="42"
-                             height="42"
-                        />
-                    </Box>
-
-                    <Box
-                        m={['5px 0px 1em', '5px 0px 1em']}
-                        color={'rgb(39, 164, 214)'}
-                        lineHeight={'1.28em'}
-                        letterSpacing={'0.18px'}
-                        fontWeight={600}
-                        fontSize={'18px'}
-                    >
-                        Pinned Messages
-                    </Box>
-
-                    <Box
-                        maxW={['520px', 'auto']}
-                        color={'rgba(0, 0, 0, 0.6)'}
-                        lineHeight={'1.23536em'}
-                        fontWeight={500}
-                        fontSize={'22px'}
-                        mb={'1em'}
-                    >
-
-                        <Box display={'inline-block'}
-                             color={'rgb(0, 0, 0)'}
-                             fontWeight={600}
-                        >
-
-                            Make sure everyone sees what’s important.
-
+                        <Box>
+                            <img src={"https://quill.chat/images/homepage/section_2/pin.svg"}
+                                 width="42"
+                                 height="42"
+                            />
                         </Box>
 
-                        Pin any message and have it float above the rest.
+                        <Box
+                            m={['5px 0px 1em', '5px 0px 1em']}
+                            color={'rgb(39, 164, 214)'}
+                            lineHeight={'1.28em'}
+                            letterSpacing={'0.18px'}
+                            fontWeight={600}
+                            fontSize={'18px'}
+                        >
+                            Pinned Messages
+                        </Box>
 
-                    </Box>
+                        <Box
+                            maxW={['520px', 'auto']}
+                            color={'rgba(0, 0, 0, 0.6)'}
+                            lineHeight={'1.23536em'}
+                            fontWeight={500}
+                            fontSize={'22px'}
+                            mb={'1em'}
+                        >
 
+                            <Box display={'inline-block'}
+                                 color={'rgb(0, 0, 0)'}
+                                 fontWeight={600}
+                            >
+
+                                Make sure everyone sees what’s important.
+
+                            </Box>
+
+                            Pin any message and have it float above the rest.
+
+                        </Box>
+                    </Reveal>
 
                 </Box>
 

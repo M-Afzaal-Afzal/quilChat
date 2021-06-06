@@ -1,5 +1,18 @@
 import React from 'react';
 import {Box, useMediaQuery} from "@chakra-ui/react";
+import {keyframes} from "@emotion/react";
+import Reveal from "react-awesome-reveal";
+
+const customAnimation = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    animation-delay: 1s;
+    opacity: 1;
+    transform: translateY(0);
+  }`;
 
 const ConversationSectionMobile = () => {
 
@@ -29,7 +42,8 @@ const ConversationSectionMobile = () => {
                 width={['auto', '50%']}
             >
 
-                <Box>
+                <Reveal keyframes={customAnimation} direction={'down'} cascade triggerOnce>
+
 
                     <Box pos={'relative'}>
 
@@ -74,29 +88,31 @@ const ConversationSectionMobile = () => {
 
                     </Box>
 
-                </Box>
+                </Reveal>
 
-                <Box
-                    color={'rgb(255, 255, 255)'}
-                    opacity={'.8'}
-                    fontSize={'17px'}
-                    lineHeight={'1.23536em'}
-                    fontWeight={500}
-                    paddingTop={'15px'}
-                    _before={{
-                        content: "''",
-                        display: 'block',
-                        width: '90%',
-                        marginBottom: '18px',
-                        background: 'rgba(255, 255, 255, 0.2)',
-                        height: '2px',
-                        borderRadius: '2px',
-                    }}
-                >
-                    Flip your channels from social to structured, and vice versa, any time. Adapt your level of
-                    structure as your needs change.
-                </Box>
+                <Reveal keyframes={customAnimation} direction={'down'} cascade triggerOnce>
 
+                    <Box
+                        color={'rgb(255, 255, 255)'}
+                        opacity={'.8'}
+                        fontSize={'17px'}
+                        lineHeight={'1.23536em'}
+                        fontWeight={500}
+                        paddingTop={'15px'}
+                        _before={{
+                            content: "''",
+                            display: 'block',
+                            width: '90%',
+                            marginBottom: '18px',
+                            background: 'rgba(255, 255, 255, 0.2)',
+                            height: '2px',
+                            borderRadius: '2px',
+                        }}
+                    >
+                        Flip your channels from social to structured, and vice versa, any time. Adapt your level of
+                        structure as your needs change.
+                    </Box>
+                </Reveal>
             </Box>
 
             {/* Second Section*/}
@@ -192,7 +208,8 @@ const ConversationSectionMobile = () => {
                                     position: 'relative',
                                     zIndex: '10 !important'
                                 }}
-                                src={"https://quill.chat/images/homepage/section_2/mobile/iphone/frame@2x.png"} width="366"
+                                src={"https://quill.chat/images/homepage/section_2/mobile/iphone/frame@2x.png"}
+                                width="366"
                                 height="738"
                                 draggable="false" className="ScreenshotBlock__AppleFrame-txfd2i-15 eSDAis"/>
 
@@ -212,8 +229,6 @@ const ConversationSectionMobile = () => {
                         </Box>
                     )
                 }
-
-
 
 
             </Box>

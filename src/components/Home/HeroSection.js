@@ -1,5 +1,18 @@
 import React from 'react';
 import {Box, Container, Text} from "@chakra-ui/react";
+import Reveal from "react-awesome-reveal";
+import {keyframes} from "@emotion/react";
+
+const customAnimation = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    animation-delay: 1s;
+    opacity: 1;
+    transform: translateY(0);
+  }`;
 
 const HeroSection = () => {
 
@@ -58,7 +71,6 @@ const HeroSection = () => {
                     }}
                 >
 
-
                     <Container
                         flexGrow={1}
                         pt={'2rem'}
@@ -74,6 +86,7 @@ const HeroSection = () => {
                         maxWidth={'container.xl'}
                     >
 
+
                         <Box
                             position={'relative'}
                             top={'1px'}
@@ -85,6 +98,8 @@ const HeroSection = () => {
                                 paddingTop: '100%',
                             }}
                         >
+
+                            <Reveal  keyframes={customAnimation} direction={'down'} cascade triggerOnce>
 
                             <Box
                                 position={'absolute'}
@@ -132,7 +147,7 @@ const HeroSection = () => {
 
                             </Box>
 
-
+                            </Reveal>
                         </Box>
 
                         <Box fontWeight={700}
@@ -169,6 +184,9 @@ const HeroSection = () => {
                             </Box>
                         </Box>
 
+                        <Reveal  keyframes={customAnimation} direction={'down'} cascade triggerOnce>
+
+
                         <Text as={'h1'}
                               fontWeight={700}
                               fontSize={['9vw', '40px']}
@@ -185,7 +203,7 @@ const HeroSection = () => {
                             Messaging to make your team better. Meet Quill.
                         </Text>
 
-
+                        </Reveal>
                         <Box
                             display={'flex'}
                             width={'100%'}
@@ -240,6 +258,8 @@ const HeroSection = () => {
                     </Container>
 
 
+                    <Reveal  keyframes={customAnimation} direction={'down'} cascade triggerOnce>
+
                     <Container
                         position={'absolute'}
                         zIndex={30}
@@ -280,6 +300,7 @@ const HeroSection = () => {
                         </Box>
 
                     </Container>
+                    </Reveal>
 
                 </Box>
 

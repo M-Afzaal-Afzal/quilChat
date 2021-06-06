@@ -11,7 +11,9 @@ const Footer = () => {
             mb={'0'}
             p={0}
             bg={'#000'}
-            maxW={'container.xl'}
+            display={'flex'}
+            justifyContent={'center'}
+            // maxW={'container.xl'}
         >
 
             <Box

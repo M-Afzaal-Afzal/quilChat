@@ -1,10 +1,23 @@
 import React, {useState} from 'react';
 import {Box} from "@chakra-ui/react";
-import { useMediaQuery } from "@chakra-ui/react"
+import {useMediaQuery} from "@chakra-ui/react"
+import Reveal from "react-awesome-reveal";
+import {keyframes} from "@emotion/react";
+
+const customAnimation = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    animation-delay: 1s;
+    opacity: 1;
+    transform: translateY(0);
+  }`;
 
 const MessageVideoSection = () => {
 
-    const [isCentered,setIsCentered] = useState(false);
+    const [isCentered, setIsCentered] = useState(false);
     const [isLargerThan600] = useMediaQuery("(min-width: 600px)")
 
     const isCenteredHandler = () => {
@@ -37,66 +50,69 @@ const MessageVideoSection = () => {
                 minW={['calc(40% + 80px)', '450px', null, '42%', '37%']}
             >
 
-                <Box>
+                <Reveal keyframes={customAnimation} direction={'down'} cascade triggerOnce>
 
-                    <Box position={'relative'}>
-                        <img style={{width: '56px', height: '56px'}}
-                             src={"https://quill.chat/images/homepage/section_messaging@2x.png?2"} width="56"
-                             height="56"/>
-                    </Box>
+                    <Box>
 
-                    {/*--purple: rgb(47,16,62);*/}
-                    {/*--turquoise: rgb(23,51,59);*/}
-                    {/*--green: rgb(6,60,14);*/}
-
-                    <Box
-                        fontWeight={700}
-                        fontSize={'35px'}
-                        letterSpacing={'-.39px'}
-                        marginTop={'25px'}
-                        color={'rgb(47,16,62)'}
-                    >
-                        One conversation at a time. Messaging bliss.
-                    </Box>
-
-
-                    <Box
-                        fontWeight={600}
-                        fontSize={'22px'}
-                        lineHeight={'1.16667em'}
-                        m={'.5em 0'}
-                        color={'rgba(255,255,255,.7)'}
-                    >
-
-                        <Box display={'inline-block'} fontWeight={600} color={'rgb(255,255,255)'}>
-                            Threads keep your conversations discoverable and organized.
+                        <Box position={'relative'}>
+                            <img style={{width: '56px', height: '56px'}}
+                                 src={"https://quill.chat/images/homepage/section_messaging@2x.png?2"} width="56"
+                                 height="56"/>
                         </Box>
-                        When you need to stay focused on a topic, use Structured Channels to require each conversation
-                        to be its own thread up front.
+
+                        {/*--purple: rgb(47,16,62);*/}
+                        {/*--turquoise: rgb(23,51,59);*/}
+                        {/*--green: rgb(6,60,14);*/}
+
+                        <Box
+                            fontWeight={700}
+                            fontSize={'35px'}
+                            letterSpacing={'-.39px'}
+                            marginTop={'25px'}
+                            color={'rgb(47,16,62)'}
+                        >
+                            One conversation at a time. Messaging bliss.
+                        </Box>
+
+
+                        <Box
+                            fontWeight={600}
+                            fontSize={'22px'}
+                            lineHeight={'1.16667em'}
+                            m={'.5em 0'}
+                            color={'rgba(255,255,255,.7)'}
+                        >
+
+                            <Box display={'inline-block'} fontWeight={600} color={'rgb(255,255,255)'}>
+                                Threads keep your conversations discoverable and organized.
+                            </Box>
+                            When you need to stay focused on a topic, use Structured Channels to require each
+                            conversation
+                            to be its own thread up front.
+                        </Box>
                     </Box>
-
-                </Box>
-
-                <Box
-                    color={'rgb(255,255,255)'}
-                    opacity={'.8'}
-                    fontSize={'17px'}
-                    lineHeight={'1.23536em'}
-                    fontWeight={500}
-                    pt={'15px'}
-                    _before={{
-                        content: "''",
-                        display: 'block',
-                        width: '90%',
-                        marginBottom: '18px',
-                        background: 'rgba(255, 255, 255, 0.2)',
-                        height: '2px',
-                        borderRadius: '2px'
-                    }}
-                >
-                    Revive ideas by sending a new message to a previous conversation. With history just a scroll away,
-                    everyone starts off up to date.
-                </Box>
+                    <Box
+                        color={'rgb(255,255,255)'}
+                        opacity={'.8'}
+                        fontSize={'17px'}
+                        lineHeight={'1.23536em'}
+                        fontWeight={500}
+                        pt={'15px'}
+                        _before={{
+                            content: "''",
+                            display: 'block',
+                            width: '90%',
+                            marginBottom: '18px',
+                            background: 'rgba(255, 255, 255, 0.2)',
+                            height: '2px',
+                            borderRadius: '2px'
+                        }}
+                    >
+                        Revive ideas by sending a new message to a previous conversation. With history just a scroll
+                        away,
+                        everyone starts off up to date.
+                    </Box>
+                </Reveal>
 
             </Box>
 
@@ -105,14 +121,14 @@ const MessageVideoSection = () => {
                 cursor={['pointer', 'w-resize']}
                 position={'relative'}
                 flexShrink={'0'}
-                p={isLargerThan600 && isCentered ? '2rem':"0"}
-                w={isLargerThan600 ? (isCentered ? '100%' : 'auto'): 'auto'}
+                p={isLargerThan600 && isCentered ? '2rem' : "0"}
+                w={isLargerThan600 ? (isCentered ? '100%' : 'auto') : 'auto'}
                 transition={'all .3s'}
             >
 
                 <Box
-                    ml={['20px','0']}
-                    mb={[ '20px','0']}
+                    ml={['20px', '0']}
+                    mb={['20px', '0']}
                     height={['auto']}
                     width={isLargerThan600 ? (isCentered ? '100%' : ['calc(100% - 40px)', '962px']) : ['calc(100% - 40px)', '962px']}
                     position={['relative']}
@@ -123,7 +139,7 @@ const MessageVideoSection = () => {
                     onClick={isCenteredHandler}
                     // transform={ 'translateX(-483.094px) translateY(-1e-07px) scale(0.516632) translateZ(0px)'}
                     _before={{
-                        content: isLargerThan600 ? (!isCentered ?  "''" : null) : "''" ,
+                        content: isLargerThan600 ? (!isCentered ? "''" : null) : "''",
                         display: 'block',
                         position: 'relative',
                         width: '100%',
@@ -131,22 +147,22 @@ const MessageVideoSection = () => {
                     }}
                 >
                     <video
-                           style={{
-                               position: !isCentered ? "absolute" : "relative",
-                               top: '0',
-                               left: "0",
-                               width: '100%',
-                               height: "100%",
-                               zIndex: '5',
-                               transition: 'filter 200ms ease 0s'
-                           }}
-                           playsInline muted
-                           autoPlay={true}
-                           src={"https://storage.googleapis.com/public-website-static-files.quill.chat/v3/homepage/section_1/mac_3_compressed.mp4"}
-                           poster={"https://quill.chat/images/homepage/section_1/video/mac_compressed_first_frame.jpeg?1"}
-                           width="360"
-                           height="780"
-                           loop={true}
+                        style={{
+                            position: !isCentered ? "absolute" : "relative",
+                            top: '0',
+                            left: "0",
+                            width: '100%',
+                            height: "100%",
+                            zIndex: '5',
+                            transition: 'filter 200ms ease 0s'
+                        }}
+                        playsInline muted
+                        autoPlay={true}
+                        src={"https://storage.googleapis.com/public-website-static-files.quill.chat/v3/homepage/section_1/mac_3_compressed.mp4"}
+                        poster={"https://quill.chat/images/homepage/section_1/video/mac_compressed_first_frame.jpeg?1"}
+                        width="360"
+                        height="780"
+                        loop={true}
                     />
                 </Box>
 

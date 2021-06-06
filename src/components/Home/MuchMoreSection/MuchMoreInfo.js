@@ -1,5 +1,18 @@
 import React from 'react';
 import {Box} from "@chakra-ui/react";
+import {keyframes} from "@emotion/react";
+import Reveal from "react-awesome-reveal";
+
+const customAnimation = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    animation-delay: 1s;
+    opacity: 1;
+    transform: translateY(0);
+  }`;
 
 const MuchMoreInfo = () => {
     return (
@@ -7,6 +20,7 @@ const MuchMoreInfo = () => {
         <Box
             p={['50px 20px','50px','100px 100px 75px']}
         >
+            <Reveal keyframes={customAnimation} direction={'down'} cascade triggerOnce>
 
             <Box
                 fontSize={['13vw','44px']}
@@ -31,7 +45,7 @@ const MuchMoreInfo = () => {
             >
                 Quill is packed with features, but your conversations always come first.
             </Box>
-
+            </Reveal>
         </Box>
 
     );

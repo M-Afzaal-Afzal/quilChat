@@ -1,5 +1,18 @@
 import React from 'react';
 import {Box} from "@chakra-ui/react";
+import Reveal from "react-awesome-reveal";
+import {keyframes} from "@emotion/react";
+
+const customAnimation = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    animation-delay: 1s;
+    opacity: 1;
+    transform: translateY(0);
+  }`;
 
 const MessageActivitySection = () => {
     return (
@@ -20,44 +33,48 @@ const MessageActivitySection = () => {
                  p={['30px 30px 0px', '60px 75px 0px']}
                  ml={['0px !important']}
             >
+                <Reveal keyframes={customAnimation} direction={'down'} cascade triggerOnce>
 
-                <img
-                    style={{
-                        width: '56px',
-                        height: '56px'
-                    }}
-                    src={"https://quill.chat/images/homepage/section_1/activity_feed@2x.png?2"}
-                    width="56" height="56"
-                />
+                    <img
+                        style={{
+                            width: '56px',
+                            height: '56px'
+                        }}
+                        src={"https://quill.chat/images/homepage/section_1/activity_feed@2x.png?2"}
+                        width="56" height="56"
+                    />
 
-                <Box
-                    fontWeight={600}
-                    fontSize={'18px'}
-                    color={'rgb(175,82,222)'}
-                    letterSpacing={'.18px'}
-                    lineHeight={'1.28em'}
-                    margin={'15px 0px 1em'}
-                >
-                    Activity Feed
-                </Box>
-
-                <Box
-                    flexGrow={1}
-                    color={'rgba(255,255,255,0.6)'}
-                    lineHeight={'1.23536em'}
-                    fontWeight={500}
-                    letterSpacing={'-0.01em'}
-                    fontSize={'20px'}
-                >
-                    <Box display={'inline-block'}
-                         color={'rgba(255,255,255,1)'}
-                         fontWeight={600}
+                    <Box
+                        fontWeight={600}
+                        fontSize={'18px'}
+                        color={'rgb(175,82,222)'}
+                        letterSpacing={'.18px'}
+                        lineHeight={'1.28em'}
+                        margin={'15px 0px 1em'}
                     >
-                        See your most important conversations first. Snooze, archive, or jump back in.
+                        Activity Feed
                     </Box>
-                    Activity Feed always keeps your conversations within reach, so you can quickly catch up on what’s
-                    new.
-                </Box>
+
+                    <Box
+                        flexGrow={1}
+                        color={'rgba(255,255,255,0.6)'}
+                        lineHeight={'1.23536em'}
+                        fontWeight={500}
+                        letterSpacing={'-0.01em'}
+                        fontSize={'20px'}
+                    >
+                        <Box display={'inline-block'}
+                             color={'rgba(255,255,255,1)'}
+                             fontWeight={600}
+                        >
+                            See your most important conversations first. Snooze, archive, or jump back in.
+                        </Box>
+                        Activity Feed always keeps your conversations within reach, so you can quickly catch up on
+                        what’s
+                        new.
+                    </Box>
+
+                </Reveal>
 
                 <Box mt={['30px', '60px']}
                      position={'relative'}
@@ -105,62 +122,68 @@ const MessageActivitySection = () => {
                 mt={['10px']}
                 flexDirection={['column']}
                 padding={['30px 30px 0px', '60px 75px 0px']}
-                ml={['0px','23px']}
+                ml={['0px', '23px']}
             >
-                <img
-                    style={{
-                        width: "56px",
-                        height:"56px"
-                    }}
-                    src={"https://quill.chat/images/homepage/section_1/fewer_notifications@2x.png?2"}
-                    width="56"
-                    height="56"
-                />
 
-                <Box
-                    fontWeight={600}
-                    fontSize={'18px'}
-                    color={'rgb(175,82,222)'}
-                    letterSpacing={'.18px'}
-                    lineHeight={'1.28em'}
-                    margin={'15px 0 1em'}
-                >
-                    Fewer Notifications
-                </Box>
+                <Reveal keyframes={customAnimation} direction={'down'} cascade triggerOnce>
 
-                <Box
-                    color={'rgba(0,0,0,0.6)'}
-                    flexGrow={1}
-                    lineHeight={'1.23536em'}
-                    fontWeight={500}
-                    letterSpacing={'-0.01em'}
-                    fontSize={'20px'}
-                >
 
-                    <Box color={'rgba(0,0,0,1)'} fontWeight={600} display={'inline-block'}>
-                        Your phone should only buzz when something is truly important.
-                    </Box>
-
-                    That’s why Quill reduces notifications, and reserves disruptions for critical or time sensitive messages.
-
-                </Box>
-
-                <Box
-                    mt={['30px','60px']}
-                    alignSelf={'center'}
-                    fontSize={0}
-                    position={'relative'}
-                >
                     <img
                         style={{
-                            position: 'relative',
-                            zIndex: 5,
+                            width: "56px",
+                            height: "56px"
                         }}
-                        src={"https://quill.chat/images/homepage/section_1/mobile_android_fewer_notifications@2x.png"}
-                         width="269"
-                         height="376"
+                        src={"https://quill.chat/images/homepage/section_1/fewer_notifications@2x.png?2"}
+                        width="56"
+                        height="56"
                     />
-                </Box>
+
+                    <Box
+                        fontWeight={600}
+                        fontSize={'18px'}
+                        color={'rgb(175,82,222)'}
+                        letterSpacing={'.18px'}
+                        lineHeight={'1.28em'}
+                        margin={'15px 0 1em'}
+                    >
+                        Fewer Notifications
+                    </Box>
+
+                    <Box
+                        color={'rgba(0,0,0,0.6)'}
+                        flexGrow={1}
+                        lineHeight={'1.23536em'}
+                        fontWeight={500}
+                        letterSpacing={'-0.01em'}
+                        fontSize={'20px'}
+                    >
+
+                        <Box color={'rgba(0,0,0,1)'} fontWeight={600} display={'inline-block'}>
+                            Your phone should only buzz when something is truly important.
+                        </Box>
+
+                        That’s why Quill reduces notifications, and reserves disruptions for critical or time sensitive
+                        messages.
+
+                    </Box>
+
+                    <Box
+                        mt={['30px', '60px']}
+                        alignSelf={'center'}
+                        fontSize={0}
+                        position={'relative'}
+                    >
+                        <img
+                            style={{
+                                position: 'relative',
+                                zIndex: 5,
+                            }}
+                            src={"https://quill.chat/images/homepage/section_1/mobile_android_fewer_notifications@2x.png"}
+                            width="269"
+                            height="376"
+                        />
+                    </Box>
+                </Reveal>
 
 
             </Box>
