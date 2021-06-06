@@ -4,6 +4,7 @@ import MessagingSection from "../components/Home/MessagingSection/MessagingSecti
 import ConversationSection from "../components/Home/ConversationSection/ConversationSection";
 import FidelityMessagingSection from "../components/Home/FidelityMessagingSection/FidelityMessagingSection";
 import MuchMoreSection from "../components/Home/MuchMoreSection/MuchMoreSection";
+import BottomCallToActionSection from "../components/Home/BottomCallToAction/BottomCallToActionSection";
 
 const Home = () => {
 
@@ -14,6 +15,7 @@ const Home = () => {
             <ConversationSection/>
             <FidelityMessagingSection/>
             <MuchMoreSection/>
+            <BottomCallToActionSection/>
         </Box>
     )
 }
