@@ -2,6 +2,7 @@ import React from 'react';
 import {Box} from "@chakra-ui/react";
 import MuchMoreInfo from "./MuchMoreInfo";
 import MuchMoreHorizontalMoving from "./MuchMoreHorizontalMoving";
+import MuchMoreBottomInfo from "./MuchMoreBottomInfo";
 
 const MuchMoreSection = () => {
     return (
@@ -13,6 +14,7 @@ const MuchMoreSection = () => {
         >
             <MuchMoreInfo/>
             <MuchMoreHorizontalMoving/>
+            <MuchMoreBottomInfo/>
         </Box>
     );
 };
