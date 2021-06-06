@@ -77,7 +77,7 @@ const BottomCallToActionSection = () => {
                                 letterSpacing={'-0.18px'}
                                 marginTop={'25px'}
                                 color={'rgb(255,255,255)'}
-                                minW={'450px'}
+                                // minW={'450px'}
                                 p={'0px 20px'}
                             >
                                 The best messaging experience. Now available for work.
@@ -188,7 +188,6 @@ const BottomCallToActionSection = () => {
 
                 </Reveal>
             </Container>
-            bottom call to action section
         </Box>
     );
 };
